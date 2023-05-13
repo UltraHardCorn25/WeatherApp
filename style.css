@@ -52,10 +52,17 @@ body {
 .container .search button:hover {
   background-color: rgba(135, 207, 235, 0.536);
 }
+.container .display {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s;
+}
 .container .display .top {
+  overflow: hidden;
   display: grid;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.2s;
 }
 .container .display .top img {
   max-width: 200px;
@@ -81,6 +88,20 @@ body {
   font-weight: 800;
 }
 .container .display .description {
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
+}
+.container .display .description .humidity,
+.container .display .description .wind {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+}
+.container .display .description .humidityVal,
+.container .display .description .windVal {
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  transition: all 0.2s;
 }/*# sourceMappingURL=style.css.map */
