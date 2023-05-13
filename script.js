@@ -1,6 +1,14 @@
 //`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`;
 
 $(".searchBtn").click(e=>{
+      display();
+});
+$('form').submit((e)=>{
+    e.preventDefault();
+    display();
+})
+
+function display(){
     const APIKey = '71a3495636b2a5a64bd266478bf49d9b';
     const city = $("input").val();
     
@@ -23,10 +31,4 @@ $(".searchBtn").click(e=>{
         $('.top').css('opacity','1');
         clearInterval(j);       
     },300);
-
-    
-
-    
-    
-    
-});
+}
